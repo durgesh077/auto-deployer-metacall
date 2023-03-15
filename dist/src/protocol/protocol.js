@@ -20,6 +20,8 @@
 import axios from 'axios';
 import FormData from 'form-data';
 import { LogType } from './deployment.js';
+import fs from 'fs';
+import { exec as execCallback } from 'child_process';
 export const isProtocolError = (err) => axios.isAxiosError(err);
 export default (token, baseURL) => {
     const api = {
@@ -73,14 +75,35 @@ export default (token, baseURL) => {
                 filename: 'test.zip',
                 contentType: 'application/zip'
             });
-            const res = await axios.post(baseURL + '/api/package/create', fd, {
-                headers: {
-                    Authorization: 'jwt ' + token,
-                    'Content-Type': 'multipart/form-data',
-                    ...fd.getHeaders()
-                }
+            //:TODO: uncomment this when the backend is ready
+            // const res: any = await axios.post<string>(
+            // 	baseURL + '/api/package/create',
+            // 	fd,
+            // 	{
+            // 		headers: {
+            // 			Authorization: 'jwt ' + token,
+            // 			'Content-Type': 'multipart/form-data',
+            // 			...fd.getHeaders()
+            // 		}
+            // 	}
+            // );
+            //use command line for now
+            //:TODO: remove this
+            fs.writeFileSync("test.zip", blob, {
+                encoding: "binary"
             });
-            return res?.data;
+            const uploader_curl_command = "curl -X POST  -H \"Authorization:jwt " + token + "\" -H \"Content-Type:multipart/form-data\" -F \"id=" + name + "\" -F \"type=" + type + "\" -F \"jsons=" + jsons + "\" -F \"runners=" + runners + "\" -F \"raw=@test.zip\" " + baseURL + "/api/package/create";
+            const data = await new Promise((res, rej) => {
+                // console.log(uploader_curl_command)
+                execCallback(uploader_curl_command, (err, stdout, stderr) => {
+                    if (err)
+                        return rej("error: " + err);
+                    res(JSON.parse(stdout));
+                });
+            });
+            // return res?.data;
+            console.log(data);
+            return data;
         },
         add: (url, branch, jsons = []) => axios
             .post(baseURL + '/api/repository/add', {
