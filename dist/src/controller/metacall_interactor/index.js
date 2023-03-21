@@ -1,5 +1,6 @@
 (await import("dotenv")).config();
 import logger from "../../logger/index.js";
+import axios from 'axios';
 import protocolAPI from "../../protocol/protocol.js";
 import { Plans } from "../../protocol/plan.js";
 import FormData from "form-data";
@@ -96,6 +97,22 @@ export const getDeployments = async (req, res) => {
         logger.error(error.message);
         res.status(500).json({
             message: "failed to get deployments"
+        });
+    }
+};
+export const getStaticFile = async (req, res) => {
+    try {
+        const prefix = req.params.prefix;
+        const suffix = req.params.suffix;
+        const filename = req.params.filename;
+        const fileContent = await axios.get(`https://api.metacall.io/${prefix}/${suffix}/v1/static/${filename}`).then(res => res.data);
+        res.send(fileContent);
+    }
+    catch (err) {
+        const error = err;
+        logger.error(error.message);
+        res.status(500).json({
+            message: "failed to get static file"
         });
     }
 };
