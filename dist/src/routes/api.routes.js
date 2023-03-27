@@ -7,7 +7,7 @@ router.use(express.json());
 router.post("/ask", ask);
 router.post("/create", upload.single('raw'), createPackage);
 router.post("/deploy", deploy);
-router.delete("/deploy", undeploy);
 router.get("/getDeployments", getDeployments);
 router.get("/getStaticFile/:prefix/:suffix/:filename", getStaticFile);
+router.post("/undeploy", undeploy);
 //# sourceMappingURL=api.routes.js.map

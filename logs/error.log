@@ -47,16 +47,7 @@
 2023-03-14 09:53:27:5327 [31merror[39m: [31mRequest failed with status code 504[39m
 2023-03-14 09:56:05:565 [31merror[39m: [31mRequest failed with status code 504[39m
 2023-03-14 10:07:54:754 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:34:24:3424 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:38:11:3811 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:39:27:3927 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:43:23:4323 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:44:50:4450 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:47:10:4710 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:51:01:511 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 06:51:42:5142 [31merror[39m: [31mRequest failed with status code 500[39m
-2023-03-15 07:54:21:5421 [31merror[39m: [31mRequest failed with status code 429[39m
-2023-03-15 07:54:24:5424 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-14 10:15:39:1539 [31merror[39m: [31mRequest failed with status code 500[39m
 2023-03-15 21:58:33:5833 [31merror[39m: [31mgetaddrinfo ENOTFOUND dashboard.metacall.io[39m
 2023-03-15 21:58:33:5833 [31merror[39m: [31mgetaddrinfo ENOTFOUND dashboard.metacall.io[39m
 2023-03-17 09:08:01:81 [31merror[39m: [31mread ECONNRESET[39m
@@ -358,3 +349,25 @@
 2023-03-20 16:43:59:4359 [31merror[39m: [31mRequest failed with status code 500[39m
 2023-03-20 16:44:47:4447 [31merror[39m: [31mRequest failed with status code 500[39m
 2023-03-20 16:45:56:4556 [31merror[39m: [31mRequest failed with status code 500[39m
+2023-03-25 07:35:39:3539 [31merror[39m: [31mself signed certificate in certificate chain[39m
+2023-03-25 07:35:39:3539 [31merror[39m: [31mself signed certificate in certificate chain[39m
+2023-03-25 09:44:22:4422 [31merror[39m: [31mself signed certificate in certificate chain[39m
+2023-03-25 09:44:22:4422 [31merror[39m: [31mself signed certificate in certificate chain[39m
+2023-03-25 10:32:41:3241 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:33:21:3321 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:33:58:3358 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:34:04:344 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:34:10:3410 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:41:47:4147 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:42:58:4258 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:43:48:4348 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 10:43:57:4357 [31merror[39m: [31mRequest failed with status code 400[39m
+2023-03-25 11:37:13:3713 [31merror[39m: [31mRequest failed with status code 504[39m
+2023-03-25 21:27:48:2748 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-25 21:31:25:3125 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-25 21:32:40:3240 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-25 21:32:48:3248 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-25 21:33:42:3342 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-25 21:33:57:3357 [31merror[39m: [31mRequest failed with status code 429[39m
+2023-03-25 21:34:44:3444 [31merror[39m: [31mRequest failed with status code 404[39m
+2023-03-25 21:37:47:3747 [31merror[39m: [31mRequest failed with status code 404[39m

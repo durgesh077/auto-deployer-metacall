@@ -20,6 +20,9 @@ export const createPackage = async (req, res) => {
         // })
         // const token = req.session.token //TODO: add token to session
         // logger.info(blob);
+        // fs.writeFileSync("test.zip", blob.buffer,{
+        //     encoding: "binary"
+        // });
         const token = process.env.METACALL_TOKEN;
         const fd = new FormData();
         const metacallAPI = protocolAPI(token, process.env.METACALL_FAAS_BASE_URL);
@@ -64,6 +67,7 @@ export const deploy = async (req, res) => {
 };
 export const undeploy = async (req, res) => {
     try {
+        console.log("done bro");
         const prefix = req.body.prefix;
         const suffix = req.body.suffix;
         const version = req.body.version ?? "v1";
